@@ -1,17 +1,18 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "programic/laravel-car-imge",
+    "description": "Get car image by make, model, color etc.",
     "keywords": [
-        ":vendor_name",
+        "programic",
         "laravel",
-        ":package_slug"
+        "car image",
+        "imagin studio"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/programic/laravel-car-imge",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Rick Bongers",
+            "email": "r.bongers@programic.com",
             "role": "Developer"
         }
     ],
@@ -35,8 +36,8 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Programic\\LaravelCarImage\\": "src/",
+            "Programic\\LaravelCarImage\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
@@ -46,10 +47,6 @@
     },
     "scripts": {
         "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
-        "analyse": "vendor/bin/phpstan analyse",
-        "test": "vendor/bin/pest",
-        "test-coverage": "vendor/bin/pest --coverage",
-        "format": "vendor/bin/pint"
     },
     "config": {
         "sort-packages": true,
@@ -61,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Programic\\LaravelCarImage\\LaravelCarImageServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "CarImage": "Programic\\LaravelCarImage\\Facades\\CarImage"
             }
         }
     },
