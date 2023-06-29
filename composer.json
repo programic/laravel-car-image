@@ -1,5 +1,5 @@
 {
-    "name": "programic/laravel-car-imge",
+    "name": "programic/laravel-car-image",
     "description": "Get car image by make, model, color etc.",
     "keywords": [
         "programic",
@@ -42,11 +42,11 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/"
+            "Programic\\LaravelCarImage\\Tests\\": "tests/"
         }
     },
     "scripts": {
-        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi"
     },
     "config": {
         "sort-packages": true,
@@ -59,10 +59,7 @@
         "laravel": {
             "providers": [
                 "Programic\\LaravelCarImage\\LaravelCarImageServiceProvider"
-            ],
-            "aliases": {
-                "CarImage": "Programic\\LaravelCarImage\\Facades\\CarImage"
-            }
+            ]
         }
     },
     "minimum-stability": "dev",
