@@ -15,7 +15,7 @@ class CarImage
         return $this;
     }
 
-    public function where(string | array $key, string $value = null): self
+    public function where(string|array $key, string $value = null): self
     {
         if (is_array($key)) {
             $this->dataPoints = array_merge($this->dataPoints, $key);
@@ -33,7 +33,7 @@ class CarImage
         $customerCode = config('services.imagin.customer_code');
 
         return new CarImageResponse(
-            Http::get("https://cdn.imagin.studio/getImage?customer={$customerCode}&" . http_build_query($this->dataPoints))
+            Http::get("https://cdn.imagin.studio/getImage?customer={$customerCode}&".http_build_query($this->dataPoints))
         );
     }
 }
